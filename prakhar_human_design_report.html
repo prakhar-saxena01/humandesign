@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prakhar Saxena — Human Design Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #c9a84c;
+    --gold-light: #e8c96e;
+    --deep: #0a0a14;
+    --panel: #0f0f1e;
+    --panel2: #13132a;
+    --border: rgba(201,168,76,0.25);
+    --text: #e8e0d0;
+    --muted: #9a9080;
+    --red: #c0392b;
+    --orange: #e67e22;
+    --green: #27ae60;
+    --blue: #2980b9;
+    --purple: #8e44ad;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--deep);
+    color: var(--text);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.8;
+    min-height: 100vh;
+  }
+
+  /* Star background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 10%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 75% 35%, rgba(255,255,255,0.35) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 65%, rgba(255,255,255,0.25) 0%, transparent 100%),
+      radial-gradient(1px 1px at 85% 75%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 85%, rgba(255,255,255,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 90%, rgba(255,255,255,0.35) 0%, transparent 100%),
+      radial-gradient(1px 1px at 95% 15%, rgba(255,255,255,0.25) 0%, transparent 100%),
+      radial-gradient(1px 1px at 35% 45%, rgba(255,255,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 65% 55%, rgba(255,255,255,0.2) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* HEADER */
+  .header {
+    text-align: center;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+  }
+
+  .header-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: 0.8;
+  }
+
+  .header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .header h1 span {
+    color: var(--gold);
+  }
+
+  .header-sub {
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+  }
+
+  .core-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .pill {
+    background: rgba(201,168,76,0.1);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 6px 18px;
+    font-size: 13px;
+    color: var(--gold-light);
+    letter-spacing: 0.5px;
+  }
+
+  /* SECTION */
+  .section {
+    margin-bottom: 56px;
+  }
+
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+    opacity: 0.7;
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-title .icon {
+    margin-right: 10px;
+    opacity: 0.8;
+  }
+
+  p { margin-bottom: 14px; color: var(--text); }
+  p:last-child { margin-bottom: 0; }
+
+  strong { color: var(--gold-light); font-weight: 500; }
+  em { color: var(--muted); font-style: italic; }
+
+  /* HIGHLIGHT BOX */
+  .highlight-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 22px 26px;
+    margin: 20px 0;
+    font-size: 16px;
+  }
+
+  .highlight-box.red { border-left-color: #c0392b; }
+  .highlight-box.green { border-left-color: #27ae60; }
+  .highlight-box.blue { border-left-color: #2980b9; }
+  .highlight-box.purple { border-left-color: #8e44ad; }
+
+  /* STAT GRID */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 20px 0;
+  }
+
+  @media(max-width:560px) { .stat-grid { grid-template-columns: 1fr; } }
+
+  .stat-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 18px 20px;
+  }
+
+  .stat-card .label {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .stat-card .value {
+    font-size: 18px;
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+
+  /* CHANNEL CARD */
+  .channel-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 26px 28px;
+    margin-bottom: 18px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .channel-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  .channel-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+
+  .channel-num {
+    font-family: 'Cinzel', serif;
+    font-size: 26px;
+    color: var(--gold);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .channel-name {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+  .channel-circuit {
+    font-size: 11px;
+    color: var(--muted);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 100px;
+    padding: 2px 12px;
+    margin-left: auto;
+  }
+
+  .channel-centers {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+  }
+
+  .gate-row {
+    background: var(--panel2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-left: 2px solid rgba(201,168,76,0.3);
+  }
+
+  .gate-row .gate-id {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    color: var(--gold);
+    margin-bottom: 2px;
+  }
+
+  .gate-row .gate-name {
+    font-size: 15px;
+    color: var(--text);
+  }
+
+  /* CENTER TABLE */
+  .center-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  @media(max-width:560px) { .center-grid { grid-template-columns: 1fr 1fr; } }
+
+  .center-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+
+  .center-card .c-name {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .center-card .c-theme {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .center-card .c-fixed {
+    font-size: 11px;
+    background: rgba(39,174,96,0.15);
+    color: #5dba7d;
+    border: 1px solid rgba(39,174,96,0.3);
+    border-radius: 100px;
+    padding: 2px 10px;
+    display: inline-block;
+  }
+
+  /* SPLIT VISUALIZATION */
+  .split-groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 20px 0;
+  }
+
+  @media(max-width:560px) { .split-groups { grid-template-columns: 1fr; } }
+
+  .split-group {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+  }
+
+  .split-group .sg-label {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .split-group .sg-centers {
+    font-size: 15px;
+    color: var(--gold-light);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .split-group .sg-channel {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* PROFILE LINES */
+  .profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 20px 0;
+  }
+
+  @media(max-width:560px) { .profile-grid { grid-template-columns: 1fr; } }
+
+  .profile-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px 22px;
+  }
+
+  .profile-card .p-line {
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .profile-card .p-name {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .profile-card .p-role {
+    font-size: 12px;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+
+  /* QUOTE */
+  .quote-block {
+    border-left: 3px solid var(--gold);
+    padding: 14px 24px;
+    margin: 24px 0;
+    background: rgba(201,168,76,0.05);
+    border-radius: 0 4px 4px 0;
+    font-size: 19px;
+    font-style: italic;
+    color: var(--gold-light);
+    line-height: 1.6;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  /* DIVIDER */
+  .divider {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--gold);
+    opacity: 0.4;
+    letter-spacing: 12px;
+    font-size: 10px;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin-bottom: 14px;
+  }
+
+  ul li {
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 10px;
+    border-radius: 100px;
+    border: 1px solid;
+    margin: 2px 4px 2px 0;
+  }
+
+  .tag.gold { color: var(--gold); border-color: rgba(201,168,76,0.4); background: rgba(201,168,76,0.08); }
+  .tag.purple { color: #b084e0; border-color: rgba(142,68,173,0.4); background: rgba(142,68,173,0.08); }
+  .tag.green { color: #6dca8a; border-color: rgba(39,174,96,0.4); background: rgba(39,174,96,0.08); }
+  .tag.red { color: #e87070; border-color: rgba(192,57,43,0.4); background: rgba(192,57,43,0.08); }
+
+  .warning-box {
+    background: rgba(192,57,43,0.08);
+    border: 1px solid rgba(192,57,43,0.3);
+    border-left: 3px solid #c0392b;
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 18px 0;
+    font-size: 15px;
+  }
+
+  .insight-box {
+    background: rgba(39,174,96,0.06);
+    border: 1px solid rgba(39,174,96,0.25);
+    border-left: 3px solid #27ae60;
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 18px 0;
+    font-size: 15px;
+  }
+
+  .note {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-eyebrow">Personal Human Design Report</div>
+    <h1>PRAKHAR <span>SAXENA</span></h1>
+    <div class="header-sub">4th November 2000 &nbsp;·&nbsp; 05:38 &nbsp;·&nbsp; Prayagraj, Uttar Pradesh, India</div>
+    <div class="core-pills">
+      <span class="pill">Manifesting Generator</span>
+      <span class="pill">Profile 5/1</span>
+      <span class="pill">Solar Plexus Authority</span>
+      <span class="pill">Quadruple Split</span>
+      <span class="pill">All 9 Centers Defined</span>
+      <span class="pill">Left Angle Cross of Incarnation 2</span>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="section">
+    <div class="section-label">Section One</div>
+    <div class="section-title"><span class="icon">◈</span>The Big Picture — Who You Are</div>
+
+    <p>Your Human Design chart is an extraordinarily rare configuration. Having <strong>all nine energy centers defined</strong> and simultaneously holding a <strong>Quadruple Split Definition</strong> places you among a tiny fraction of people on earth. You are a self-contained energy universe — fixed, consistent, powerful, and paradoxically multidimensional. Understanding your chart is less about finding yourself, and more about <em>recognizing</em> what you already are.</p>
+
+    <div class="quote-block">"You are not here to become. You are here to be — fully, consistently, and on your own terms."</div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="label">Energy Type</div>
+        <div class="value">Manifesting Generator</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Strategy</div>
+        <div class="value">To Respond</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Authority</div>
+        <div class="value">Solar Plexus (Emotional)</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Profile</div>
+        <div class="value">5/1 — Heretic / Investigator</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Definition</div>
+        <div class="value">Quadruple Split</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Signature Goal</div>
+        <div class="value">Satisfaction & Peace</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Not-Self Theme</div>
+        <div class="value">Frustration & Anger</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Incarnation Cross</div>
+        <div class="value">L.A. Cross of Incarnation 2</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <!-- TYPE -->
+  <div class="section">
+    <div class="section-label">Section Two</div>
+    <div class="section-title"><span class="icon">⚡</span>Your Type — Manifesting Generator</div>
+
+    <p>The <strong>Manifesting Generator</strong> is the rarest and most energetically powerful of all types — a hybrid that carries both the sustained life-force of the Generator and the initiating capacity of the Manifestor. You are built for speed, volume, and multi-dimensionality. Where others must choose one path, you can run several simultaneously. Where others burn out, you refuel through engagement itself.</p>
+
+    <div class="highlight-box">
+      <strong>Your energy is not a resource — it is a current.</strong> Unlike Projectors or Reflectors who must manage output carefully, your Sacral center generates continuously. The more you engage with things that genuinely light you up, the more energy you have. Doing what you love doesn't drain you — it charges you.
+    </div>
+
+    <p>The "Manifesting" aspect comes from having a <strong>defined throat connected to the motor centers</strong> — specifically through your G Center → Throat channel (31-7). This means you have a natural ability to voice direction, influence others, and move things into manifestation through speech and leadership. Your words carry weight.</p>
+
+    <p><strong>How this plays out practically:</strong></p>
+    <ul>
+      <li>You process information and make decisions faster than most around you</li>
+      <li>You often skip steps others need — this is a feature, not a flaw</li>
+      <li>Multitasking across projects and interests feels natural and sustainable</li>
+      <li>You can initiate AND respond — but you must still use your strategy to avoid resistance</li>
+      <li>When you're in flow, you have almost superhuman endurance</li>
+    </ul>
+
+    <div class="warning-box">
+      <strong>⚠ The Shadow:</strong> When you operate outside your strategy — forcing things, pursuing paths that don't genuinely excite you, or saying yes out of obligation — you experience deep <em>frustration and anger</em>. These are not personality flaws. They are the chart's signal that you are off-course.
+    </div>
+  </div>
+
+  <!-- STRATEGY -->
+  <div class="section">
+    <div class="section-label">Section Three</div>
+    <div class="section-title"><span class="icon">◎</span>Strategy — To Respond</div>
+
+    <p>Despite having manifestation capacity, your correct strategy is still <strong>To Respond</strong> — to let life bring the invitation, and then act from your gut response to it. This is the single most important behavioral key in your design.</p>
+
+    <p>Responding doesn't mean being passive. It means being <em>present and alert</em> — which aligns perfectly with your Personality Sun in Gate 44 (Alertness). Your job is to notice, sense, and feel into what's arriving in your environment, and then move from that felt sense of "yes" or "no."</p>
+
+    <div class="highlight-box green">
+      <strong>What responding looks like:</strong> Someone mentions a project → your gut lights up → you engage. An opportunity appears → something in you hums → you move toward it. Life presents a door → you feel it's right → you walk through.
+    </div>
+
+    <div class="warning-box">
+      <strong>What non-response looks like:</strong> You initiate something from your mind ("I should do this," "I need to make this happen"), skip the gut check, and then hit walls, resistance, or lose interest halfway through. This is the classic Manifesting Generator frustration loop.
+    </div>
+
+    <p>The practice is simple but deeply counter-cultural: <strong>pause before initiating</strong>. Let the external trigger come. Then feel into your sacral response — not your mind's opinion, but the gut sound or impulse that either opens or closes.</p>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <!-- AUTHORITY -->
+  <div class="section">
+    <div class="section-label">Section Four</div>
+    <div class="section-title"><span class="icon">◐</span>Authority — Solar Plexus (Emotional)</div>
+
+    <p>Your decision-making authority is the <strong>Solar Plexus</strong> — emotional authority. This is the most complex and nuanced of all the inner authorities, and it demands a particular kind of patience and self-trust that most of us were never taught.</p>
+
+    <p>You have an emotional wave — a continuous rise and fall of feeling that colors your perception of everything. In a high, things look promising and exciting. In a low, things look bleak or wrong. <strong>Neither of these states shows you the truth.</strong> The truth only appears across the wave, over time, with clarity.</p>
+
+    <div class="highlight-box">
+      <strong>The Golden Rule:</strong> Never make a significant decision in the moment. Not when you're high (excited, hopeful). Not when you're low (anxious, sad). Sleep on it. Let the wave move. When the same decision still feels correct across multiple emotional states — that's your signal.
+    </div>
+
+    <p>There is always a spectrum of emotional truth available to you. Clarity, for you, is not the absence of emotion — it's the settling of the wave into a consistent direction.</p>
+
+    <p><strong>Emotional Authority in practice:</strong></p>
+    <ul>
+      <li>Major decisions: give yourself at least a few days to a week</li>
+      <li>When in doubt, say: <em>"I need time to feel into this"</em></li>
+      <li>You're not being indecisive — you're being correct</li>
+      <li>Others may pressure you to decide quickly — hold your ground</li>
+      <li>The more important the decision, the longer you need</li>
+    </ul>
+
+    <p class="note">Note: Because your Solar Plexus is defined, you also carry emotional energy that others feel and absorb. You condition those around you emotionally. What you feel is genuinely yours — but be mindful that it also shapes the atmosphere in the room.</p>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <!-- PROFILE -->
+  <div class="section">
+    <div class="section-label">Section Five</div>
+    <div class="section-title"><span class="icon">⬡</span>Profile — 5/1 The Heretic / Investigator</div>
+
+    <p>Your profile is the <strong>costume you wear</strong> in this life — the archetypal role you play in the world. The 5/1 profile is one of the most powerful and paradoxical in all of Human Design. You are built to be seen, projected upon, and to deliver practical wisdom. But you also need foundations that others never see.</p>
+
+    <div class="profile-grid">
+      <div class="profile-card">
+        <div class="p-line">Line 5</div>
+        <div class="p-name">The Heretic</div>
+        <div class="p-role">Personality — Conscious / How others see you</div>
+        <p style="font-size:15px;">Others project their hopes onto you before you even speak. People see in you a <strong>problem solver, a savior, a practical guide</strong>. They come to you with their expectations. When you meet them, you become a hero. When you don't — even through no fault of your own — you become the heretic, the disappointment. This is the 5/1 paradox: you are always being judged against other people's projections. <br><br>The key is <strong>managing your reputation carefully</strong>. You can only be in the field (visible, influential) for so long before you need to retreat. Privacy protects you. Distance maintains the projection field. The 5 line works best in bursts — showing up powerfully, then withdrawing to recharge and avoid the disillusionment cycle.</p>
+      </div>
+      <div class="profile-card">
+        <div class="p-line">Line 1</div>
+        <div class="p-name">The Investigator</div>
+        <div class="p-role">Design — Unconscious / Your foundation</div>
+        <p style="font-size:15px;">Below the surface, your foundation is built on <strong>research, knowledge, and solid ground</strong>. You cannot function well without this. When you don't know enough, you feel insecure and anxious — even if you can't name why. The 1 line needs to study, gather, understand deeply before it can act with confidence. <br><br>This is your secret fuel. Every practical solution you bring to others through your 5 line is backed by the 1's research. You're the expert who studies in private and delivers in public. Never apologize for the time you spend building knowledge — it's structurally necessary for you to function at your best.</p>
+      </div>
+    </div>
+
+    <div class="highlight-box purple">
+      <strong>5/1 Together:</strong> You are here to be a <em>practical universalizer</em> — someone who takes deep, researched knowledge and translates it into solutions that work for many people. Your universality is your gift. You don't belong to one niche; you bridge worlds. But this only works when your 1-line foundation is solid, and your 5-line reputation is carefully tended.
+    </div>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <!-- DEFINITION -->
+  <div class="section">
+    <div class="section-label">Section Six</div>
+    <div class="section-title"><span class="icon">◈</span>Quadruple Split — A Universe in Four Parts</div>
+
+    <p>Your <strong>Quadruple Split Definition</strong> is extraordinary. While most people have 1, 2, or sometimes 3 separate circuits in their bodygraph, you have <strong>four completely independent energy groups</strong> — none of which are internally bridged to each other. This makes you one of the rarest configurations in Human Design.</p>
+
+    <p>Combined with having <strong>all nine centers defined</strong>, this creates a paradox: you are entirely self-contained yet deeply segmented. Each of your four circuits is whole and powerful within itself, but they don't talk to each other internally. The bridging happens through the right <em>people and environments</em>.</p>
+
+    <div class="split-groups">
+      <div class="split-group">
+        <div class="sg-label">Circuit Group 1</div>
+        <div class="sg-centers">Head + Ajna</div>
+        <div class="sg-channel">Connected via Channel 61-24 (Awareness)</div>
+      </div>
+      <div class="split-group">
+        <div class="sg-label">Circuit Group 2</div>
+        <div class="sg-centers">Sacral + G + Throat</div>
+        <div class="sg-channel">Connected via 29-46 and 31-7</div>
+      </div>
+      <div class="split-group">
+        <div class="sg-label">Circuit Group 3</div>
+        <div class="sg-centers">Spleen + Heart</div>
+        <div class="sg-channel">Connected via Channel 44-26 (Surrender)</div>
+      </div>
+      <div class="split-group">
+        <div class="sg-label">Circuit Group 4</div>
+        <div class="sg-centers">Root + Solar Plexus</div>
+        <div class="sg-channel">Connected via Channel 19-49 (Synthesis)</div>
+      </div>
+    </div>
+
+    <p><strong>What Quadruple Split means for you:</strong></p>
+    <ul>
+      <li>You have four distinct "modes" or facets of self — all real, all you</li>
+      <li>You may feel inconsistent or like you operate differently in different contexts</li>
+      <li>Certain people in your life "bridge" the splits and help you feel more integrated</li>
+      <li>Long-term, consistent relationships are especially important for your wellbeing</li>
+      <li>You need more time to process and synthesize than most — your circuits are doing more independent work</li>
+      <li>You condition others significantly in all four energy domains simultaneously</li>
+    </ul>
+
+    <div class="insight-box">
+      <strong>The Gift:</strong> Because your circuits are independent, you can show up with a different facet of yourself in different situations without losing coherence. You are genuinely multidimensional — not inconsistent. Each mode is authentic. You're not performing; you're rotating through your many real dimensions.
+    </div>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <!-- ALL CENTERS DEFINED -->
+  <div class="section">
+    <div class="section-label">Section Seven</div>
+    <div class="section-title"><span class="icon">◉</span>All 9 Centers Defined — The Complete Field</div>
+
+    <p>Having <strong>all nine centers defined</strong> is vanishingly rare. It means you carry a fixed, consistent energy field in every domain of human experience. You are not easily influenced or conditioned by others — in fact, it is almost entirely the other way around: <strong>you condition everyone in your environment</strong>, in all nine energetic domains.</p>
+
+    <div class="center-grid">
+      <div class="center-card">
+        <div class="c-name">Root</div>
+        <div class="c-theme">Pressure & Adrenaline</div>
+        <div class="c-fixed">Defined</div>
+      </div>
+      <div class="center-card">
+        <div class="c-name">Sacral</div>
+        <div class="c-theme">Life Force & Work</div>
+        <div class="c-fixed">Defined</div>
+      </div>
+      <div class="center-card">
+        <div class="c-name">Splenic</div>
+        <div class="c-theme">Intuition & Fear</div>
+        <div class="c-fixed">Defined</div>
+      </div>
+      <div class="center-card">
+        <div class="c-name">Solar Plexus</div>
+        <div class="c-theme">Emotion & Clarity</div>
+        <div class="c-fixed">Defined</div>
+      </div>
+      <div class="center-card">
+        <div class="c-name">Heart / Will</div>
+        <div class="c-theme">Willpower & Ego</div>
+        <div class="c-fixed">Defined</div>
+      </div>
+      <div class="center-card">
+        <div class="c-name">G Center</div>
+        <div class="c-theme">Identity & Direction</div>
+        <div class="c-fixed">Defined</div>
+      </div>
+      <div class="center-card">
+        <div class="c-name">Throat</div>
+        <div class="c-theme">Voice & Action</div>
+        <div class="c-fixed">Defined</div>
+      </div>
+      <div class="center-card">
+        <div class="c-name">Ajna</div>
+        <div class="c-theme">Mental Processing</div>
+        <div class="c-fixed">Defined</div>
+      </div>
+      <div class="center-card">
+        <div class="c-name">Head</div>
+        <div class="c-theme">Inspiration & Questions</div>
+        <div class="c-fixed">Defined</div>
+      </div>
+    </div>
+
+    <p><strong>What this means center by center:</strong></p>
+
+    <div class="gate-row">
+      <div class="gate-id">Root Center — Defined</div>
+      <div class="gate-name">You have a consistent, reliable relationship with pressure and stress. You don't get overwhelmed by life's demands the way undefined-Root people do. You manage adrenaline well and can sustain driven, pressured environments without burning out — as long as you're engaged.</div>
+    </div>
+
+    <div class="gate-row">
+      <div class="gate-id">Sacral Center — Defined</div>
+      <div class="gate-name">The engine of the Generator type. You have abundant, renewable life-force energy. When you're doing work you love, you are nearly inexhaustible. This also means you need to physically exhaust yourself before bed — otherwise you'll lie awake with unused energy buzzing through you.</div>
+    </div>
+
+    <div class="gate-row">
+      <div class="gate-id">Splenic Center — Defined</div>
+      <div class="gate-name">Your intuition and immune system are consistent and reliable. You have a steady, moment-to-moment awareness of what is healthy and safe for you. Splenic hits are quiet and instantaneous — trust them even when they don't make logical sense. You are also generally physically resilient.</div>
+    </div>
+
+    <div class="gate-row">
+      <div class="gate-id">Solar Plexus — Defined</div>
+      <div class="gate-name">Your emotional wave is yours and it is real. You cycle through highs and lows and this colors your perception of everything. This is your authority — the source of your decision-making power. You also carry emotional energy that everyone around you absorbs. Your mood shapes the room.</div>
+    </div>
+
+    <div class="gate-row">
+      <div class="gate-id">Heart / Will Center — Defined</div>
+      <div class="gate-name">You have consistent willpower and can follow through on commitments when they come from a place of genuine desire. However — you should only commit to what you truly want. Making promises from ego or social pressure leads to deep resentment. Your word carries weight; choose it wisely.</div>
+    </div>
+
+    <div class="gate-row">
+      <div class="gate-id">G Center — Defined</div>
+      <div class="gate-name">Your identity, sense of self, and direction in life are fixed and consistent. You always know, at some level, who you are — even when you can't articulate it. You have a magnetic quality in terms of direction. Others tend to look to you to set the course, and you naturally do.</div>
+    </div>
+
+    <div class="gate-row">
+      <div class="gate-id">Throat Center — Defined</div>
+      <div class="gate-name">You have a consistent voice — a reliable ability to communicate, express, and manifest through speech. Your words have a particular quality of influence. People hear you differently than others. What you say tends to land and stick. Use this consciously — especially in your 5-line role as a public solution-bringer.</div>
+    </div>
+
+    <div class="gate-row">
+      <div class="gate-id">Ajna Center — Defined</div>
+      <div class="gate-name">You have a consistent way of processing, analyzing, and making sense of the world. Your mind doesn't waver between frameworks — you have a fixed cognitive style. This brings reliability to how you think, but can also mean you hold your perspectives firmly. Stay curious about other ways of seeing.</div>
+    </div>
+
+    <div class="gate-row">
+      <div class="gate-id">Head Center — Defined</div>
+      <div class="gate-name">You have a consistent source of inspiration and mental pressure. You are wired to ask certain questions — and this pressure doesn't go away. Channel 61-24 means you are built to be inspired by mystery and to return to those mysteries until insight comes. Your inspiration is a renewable resource.</div>
+    </div>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <!-- CHANNELS -->
+  <div class="section">
+    <div class="section-label">Section Eight</div>
+    <div class="section-title"><span class="icon">〜</span>Your Five Channels — The Circuitry of Your Design</div>
+
+    <p>Channels are the pathways that connect your defined centers. Each channel carries a specific archetypal energy and theme. Your five channels form the connective tissue of who you are — the <em>how</em> beneath the <em>what</em>.</p>
+
+    <!-- Channel 19-49 -->
+    <div class="channel-card">
+      <div class="channel-header">
+        <span class="channel-num">19 — 49</span>
+        <span class="channel-name">The Channel of Synthesis</span>
+        <span class="channel-circuit">Tribal Circuit</span>
+      </div>
+      <div class="channel-centers">Root Center → Solar Plexus Center</div>
+      <div class="gate-row">
+        <div class="gate-id">Gate 19 — Wanting / Approach</div>
+        <div class="gate-name">An acute sensitivity to the fundamental needs of others and the tribe — food, shelter, love, sex, belonging. You instinctively sense what is needed in any group or relationship, often before anyone else does.</div>
+      </div>
+      <div class="gate-row">
+        <div class="gate-id">Gate 49 — Principles / Revolution</div>
+        <div class="gate-name">The power to accept or reject based on principles. When the social contract is broken — when needs aren't being met — Gate 49 has the energy and clarity to say "enough" and initiate a new order. This is the gate of emotional revolution.</div>
+      </div>
+      <p style="margin-top:14px;">Together, this channel gives you a <strong>deep sensitivity to the needs of those in your community or tribe</strong>. You feel when people aren't being nourished — emotionally, physically, relationally. And you have the emotional authority to reshape relationships or alliances when they've become unhealthy. This is also where your <em>tribal loyalty</em> lives: you form deep bonds and take relationship commitments seriously. When the relationship works, you are fully devoted. When it crosses a principle, the revolution comes.</p>
+      <p><span class="tag gold">Tribal belonging</span><span class="tag purple">Emotional sensitivity</span><span class="tag red">Principled rejection</span><span class="tag green">Social nourishment</span></p>
+    </div>
+
+    <!-- Channel 29-46 -->
+    <div class="channel-card">
+      <div class="channel-header">
+        <span class="channel-num">29 — 46</span>
+        <span class="channel-name">The Channel of Discovery</span>
+        <span class="channel-circuit">Collective Circuit</span>
+      </div>
+      <div class="channel-centers">Sacral Center → G Center</div>
+      <div class="gate-row">
+        <div class="gate-id">Gate 29 — Perseverance / The Abysmal</div>
+        <div class="gate-name">The gate of commitment and saying yes. Once Gate 29 commits to something, it has the energy to see it through depths that would exhaust others. However, it can also say yes indiscriminately — which leads to over-commitment and burnout.</div>
+      </div>
+      <div class="gate-row">
+        <div class="gate-id">Gate 46 — Pushing Upward / Love of Body</div>
+        <div class="gate-name">A love of the physical — the body, the experience, the tangible world. Gate 46 is about the luck of embodiment: being in the right place at the right time because you are present in your body and attuned to what it wants. This gate attracts fortune through physical commitment and presence.</div>
+      </div>
+      <p style="margin-top:14px;">The Channel of Discovery connects your life force (Sacral) directly to your direction (G Center). This means <strong>your body knows where you're supposed to go</strong>. When you fully commit to something with your Sacral energy and love of the experience, you find yourself in the right places, meeting the right people, at the right times. This isn't lucky accident — it's design. Your body is a compass when you trust it.</p>
+      <p>The shadow of this channel: because Gate 29 can say yes to anything, be mindful of committing before you've run it through your emotional authority. Over-commitment is a real risk with this channel active.</p>
+      <p><span class="tag gold">Full commitment</span><span class="tag green">Embodied luck</span><span class="tag purple">Persistence</span><span class="tag red">Over-commitment risk</span></p>
+    </div>
+
+    <!-- Channel 31-7 -->
+    <div class="channel-card">
+      <div class="channel-header">
+        <span class="channel-num">31 — 7</span>
+        <span class="channel-name">The Channel of Alpha</span>
+        <span class="channel-circuit">Collective Circuit</span>
+      </div>
+      <div class="channel-centers">G Center → Throat Center</div>
+      <div class="gate-row">
+        <div class="gate-id">Gate 31 — Influence / The Power of the Great</div>
+        <div class="gate-name">The voice of democratic leadership. Gate 31 speaks with natural authority — the kind others follow not because they're commanded to, but because they trust the voice. This gate says "I lead" and means it. The influence is earned through consistency and authenticity.</div>
+      </div>
+      <div class="gate-row">
+        <div class="gate-id">Gate 7 — The Army / The Role of the Self</div>
+        <div class="gate-name">The role of finding and setting direction for the collective. Gate 7 understands that leadership is a role one steps into — not a possession. It carries the energy of organizing around shared direction and helping groups navigate toward the future.</div>
+      </div>
+      <p style="margin-top:14px;">This is your <strong>natural leadership channel</strong>. It connects your identity and direction (G Center) directly to your voice (Throat) — meaning you are built to lead through articulation, to set direction through how you speak. Others naturally recognize your voice as one worth following. Combined with your 5/1 profile, this makes you someone who others project leadership qualities onto — not wrongly. <em>You are a natural democratic leader whose voice moves people.</em></p>
+      <p>This channel operates in the collective circuit — meaning your leadership serves a larger community or movement, not just individuals. You are not designed to be a private contractor; your influence has the potential for wide reach.</p>
+      <p><span class="tag gold">Vocal authority</span><span class="tag green">Democratic leadership</span><span class="tag purple">Direction-setting</span><span class="tag gold">Collective influence</span></p>
+    </div>
+
+    <!-- Channel 44-26 -->
+    <div class="channel-card">
+      <div class="channel-header">
+        <span class="channel-num">44 — 26</span>
+        <span class="channel-name">The Channel of Surrender</span>
+        <span class="channel-circuit">Tribal Circuit</span>
+      </div>
+      <div class="channel-centers">Splenic Center → Heart Center</div>
+      <div class="gate-row">
+        <div class="gate-id">Gate 44 — Coming to Meet / Alertness (Personality Sun ☉)</div>
+        <div class="gate-name">Your Personality Sun gate — the most defining gate in your chart, representing ~70% of your conscious identity. Gate 44 is instinctive alertness — a pattern-recognition ability that draws from the past to sense danger or opportunity in the present. This is the gate of the scout, the trader, the business mind. You read situations before others have processed them.</div>
+      </div>
+      <div class="gate-row">
+        <div class="gate-id">Gate 26 — The Taming Power of the Great / The Egoist</div>
+        <div class="gate-name">The gate of the salesperson, the promoter, the ego-memory. Gate 26 has an instinctive ability to package, present, and sell ideas, concepts, or products. It carries a strong ego memory — it remembers what has worked in the past and applies that pattern to the present.</div>
+      </div>
+      <p style="margin-top:14px;">This channel is the <strong>engine of your business and tribal instincts</strong>. You carry an almost preternatural sense for what will work — in business, in negotiations, in tribal alliances. Your Splenic intuition (Gate 44) reads patterns from history and translates them into present-tense awareness, while your Heart (Gate 26) gives you the will and ego to act on and sell those insights.</p>
+      <p>Since Gate 44 is your <em>Personality Sun</em>, alertness is at the very core of who you consciously are. You notice things. You see the pattern underneath the surface. This is not just a trait — it is your fundamental identity in this life. Trust your pattern recognition. It's operating even when you're not aware of it.</p>
+      <p><span class="tag gold">Pattern recognition</span><span class="tag green">Business acumen</span><span class="tag purple">Instinctive alertness</span><span class="tag red">Ego memory</span></p>
+    </div>
+
+    <!-- Channel 61-24 -->
+    <div class="channel-card">
+      <div class="channel-header">
+        <span class="channel-num">61 — 24</span>
+        <span class="channel-name">The Channel of Awareness</span>
+        <span class="channel-circuit">Individual Circuit</span>
+      </div>
+      <div class="channel-centers">Head Center → Ajna Center</div>
+      <div class="gate-row">
+        <div class="gate-id">Gate 61 — Inner Truth / Mystery</div>
+        <div class="gate-name">The gate of inspiration from the unknowable. Gate 61 carries a pressure — an almost compulsive need to understand what cannot be logically understood. It is drawn to mystery, metaphysics, the unexplained. And it receives inspiration in sudden, nonlinear flashes.</div>
+      </div>
+      <div class="gate-row">
+        <div class="gate-id">Gate 24 — Returning / Rationalization</div>
+        <div class="gate-name">The gate that processes and rationalizes. Gate 24 returns again and again to the same questions until an insight emerges — not by force, but by sustained attention over time. It is the gate of the mind that won't let something go until it has been understood.</div>
+      </div>
+      <p style="margin-top:14px;">This channel runs entirely in your <strong>individual (knowing) circuit</strong> — which means your mental life is deeply personal and non-linear. Your insights don't come from logic or systematic analysis; they arrive in sudden flashes after extended periods of rumination. You circle back to questions that fascinate you, often for days or months, until one day — the knowing arrives.</p>
+      <p>You are built to receive <em>inner truth</em>. This is not about information gathering — it's about the pressure of mystery resolving into knowing. The channel also gives you a powerful capacity to translate that knowing into language that makes sense to others, through your connected Ajna and Throat.</p>
+      <div class="insight-box">
+        <strong>Practical implication:</strong> Don't try to force insights. The mind under Gate 61 pressure will loop and spiral if you try to think your way to the answer. Instead, engage, then release. Let it marinate. The answer will come — often when you're doing something unrelated. Trust the process.
+      </div>
+      <p><span class="tag gold">Inspired knowing</span><span class="tag purple">Mystery-driven</span><span class="tag green">Non-linear insight</span><span class="tag gold">Inner truth</span></p>
+    </div>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <!-- INCARNATION CROSS -->
+  <div class="section">
+    <div class="section-label">Section Nine</div>
+    <div class="section-title"><span class="icon">✦</span>Incarnation Cross — Left Angle Cross of Incarnation 2</div>
+
+    <p>Your Incarnation Cross is your <strong>life's purpose</strong> — the broad karmic and experiential theme you're here to live through. The <strong>Left Angle Cross of Incarnation 2</strong> is a fatalistic cross in the individual circuit, meaning your life carries a strong thread of <em>destiny through encounter</em>.</p>
+
+    <div class="highlight-box">
+      <strong>Left Angle crosses</strong> are fatalistic — certain encounters, experiences, and people will find their way to you with remarkable timing. You don't create these meetings so much as you arrive into them. Your life has a quality of "things happening to you at exactly the right moment."
+    </div>
+
+    <p>The Cross of Incarnation itself speaks to themes of <strong>rebirth, transformation, and purposeful arrival</strong>. You are someone who carries the energy of renewal — both for yourself and for those who encounter you. You may go through profound transformations across different chapters of your life, and each of those rebirths serves the larger purpose of becoming more fully who you are.</p>
+
+    <p>The 5/1 modifier to this cross amplifies the sense that your life is <em>meant to be seen</em>. Your transformation is not just private — it becomes material that others learn from, project onto, and are changed by. The Heretic (5) who investigates (1) the deepest mysteries of incarnation itself is, in many ways, your life's essence.</p>
+
+    <ul>
+      <li>You are here to experience life fully — not to transcend it</li>
+      <li>Meaningful encounters will shape your path more than your planning</li>
+      <li>Each major life chapter may feel like a different life entirely — this is correct</li>
+      <li>Your transformations have collective significance, not just personal</li>
+    </ul>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <!-- PERSONALITY SUN -->
+  <div class="section">
+    <div class="section-label">Section Ten</div>
+    <div class="section-title"><span class="icon">☉</span>Personality Sun — Gate 44, Line 5</div>
+
+    <p>The <strong>Personality Sun gate</strong> is the single most important gate in your chart. It represents approximately 70% of your conscious identity — the core of who you experience yourself to be. Your Personality Sun is in <strong>Gate 44, Line 5</strong>.</p>
+
+    <p><strong>Gate 44 — Coming to Meet:</strong> Instinctive alertness. Pattern recognition drawn from the memory of the past. The capacity to sense what is appropriate and timely in any encounter. The scout who reads the terrain before the army arrives. The trader who senses what the market will do before the data confirms it.</p>
+
+    <p><strong>Line 5 — Practical Application:</strong> The 5th line of Gate 44 brings this alertness into the realm of universal applicability. You don't just sense patterns for yourself — you sense them in service of the broader tribe. Your awareness can see what others need to hear, even when they haven't formulated the question yet.</p>
+
+    <div class="quote-block">"You arrived in this world as someone who reads rooms, senses patterns, and knows things before they're said. This is not a skill you developed — it is the frequency you emit."</div>
+
+    <p>Living this gate fully means trusting your first read of situations, people, and environments. Your instincts about <em>what has been</em> and <em>what is coming</em> are not paranoia or imagination — they are your primary navigational system. The work of this lifetime is learning to trust that faculty completely, without needing external confirmation.</p>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <!-- SYNTHESIS -->
+  <div class="section">
+    <div class="section-label">Section Eleven</div>
+    <div class="section-title"><span class="icon">◬</span>Living Your Design — The Integration</div>
+
+    <p>Now that we've seen each element in detail, here is how they weave together into a coherent picture of who you are and how you're designed to move through life.</p>
+
+    <div class="highlight-box">
+      <strong>You are a rare complete system</strong> — all nine centers defined, four independent circuits, five powerful channels, a leadership voice, a pattern-reading identity, and a life purpose shaped by transformational encounters. The challenge isn't to discover who you are. It's to stop apologizing for it.
+    </div>
+
+    <p><strong>Your design in a single paragraph:</strong> You are a Manifesting Generator who carries the full spectrum of human energy — no undefined centers, no places where you're easily influenced or conditioned. Your four independent circuits give you four reliable modes of operating, each powerful in its own right. You lead through your voice (31-7), commit fully to what you love (29-46), read patterns and opportunities with uncanny precision (44-26), receive non-linear insights from deep mystery (61-24), and hold the emotional intelligence to sense what your tribe needs (19-49). You're here to deliver practical, universally applicable solutions (5/1 profile) born from deep foundations of research and knowledge. And you make decisions correctly only when you've given your emotional wave time to reveal its truth.</p>
+
+    <p><strong>What correct living looks like for you:</strong></p>
+    <ul>
+      <li><strong>Respond, don't initiate from the mind.</strong> Wait for life to bring the trigger. Your gut knows what your mind doesn't yet.</li>
+      <li><strong>Slow down on big decisions.</strong> Sleep on them. Feel them across your emotional wave. Clarity comes to you over time.</li>
+      <li><strong>Trust your pattern recognition.</strong> Gate 44 is your Personality Sun — your instincts are not paranoia. They are data.</li>
+      <li><strong>Protect your reputation carefully.</strong> The 5 line lives or dies on how well its reputation is managed. Privacy and selective visibility matter.</li>
+      <li><strong>Build deep foundations first.</strong> Your 1 line needs solid research before you can deliver. Give it that time.</li>
+      <li><strong>Exhaust your body before sleep.</strong> Your defined Sacral needs to be physically spent by the end of the day.</li>
+      <li><strong>Value your consistent relationships.</strong> With a Quadruple Split, the people who bridge your circuits are essential, not optional.</li>
+      <li><strong>Let insights arrive on their own schedule.</strong> Your 61-24 channel works through rumination and release — not forcing.</li>
+    </ul>
+
+    <div class="insight-box">
+      <strong>The Not-Self Theme to watch:</strong> Frustration is your signal that you're off-course — operating from obligation rather than genuine response, making decisions too quickly without emotional clarity, or trying to force things rather than respond. When you feel persistent frustration, stop and ask: <em>Am I responding or initiating? Have I given this enough time emotionally?</em>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div style="margin-bottom:10px; color: var(--gold); opacity:0.6; font-family: 'Cinzel', serif; font-size: 14px;">PRAKHAR SAXENA</div>
+    Personal Human Design Report &nbsp;·&nbsp; Generated March 2026<br>
+    <span style="font-size: 11px; opacity:0.5;">Based on birth data: 4 November 2000, 05:38, Prayagraj, India</span>
+  </div>
+
+</div>
+</body>
+</html>
